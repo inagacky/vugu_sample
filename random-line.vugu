@@ -1,0 +1,23 @@
+<span :class='c.getStyle(c.Number)' vg-content='c.Number' style="margin-left: 10px;"></span>
+
+<script type="application/x-go">
+    type RandomLine struct {
+      Number int `vugu:"data"`
+    }
+
+    func (r *RandomLine) getStyle(num int) string {
+    	return []string{"red", "green", "blue"}[num];
+    }
+</script>
+
+<style>
+    .red {
+        color: #f00;
+    }
+    .green {
+        color: #0f0;
+    }
+    .blue {
+        color: #00f;
+    }
+</style>
